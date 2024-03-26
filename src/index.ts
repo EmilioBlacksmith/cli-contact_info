@@ -1,50 +1,12 @@
 // import dependencies
-import boxen from "boxen";
-import data from "./data.js";
+import inquirer from "inquirer";
+import clear from "clear";
+import questions from "./promptActions.js";
+import businessCard from "./businessCard.js";
 
-console.clear();
+clear();
 
-const card = boxen(
-	[
-		`Howdy 🤠`,
-		`${data.name}`,
-		`${data.handle}\n`,
-		`I'm a ${data.work}\n`,
-		`\nMy Main Links. ⚙️`,
-		`My YouTube Channel => ${data.youtube}`,
-		`My Website => ${data.website}`,
-		`My Personal Blog => ${data.blog}`,
-		`My Github => ${data.github}\n`,
-		`\nMy Socials. 👀`,
-		`Twitter => ${data.twitter}`,
-		`IG => ${data.instagram}\n\n`,
-		`${data.description}`,
-	].join("\n"),
-	{
-		height: 27,
-		width: 100,
-		borderStyle: "round",
-		textAlignment: "center",
-		float: "center",
-		dimBorder: true,
-		margin: 1,
-		padding: 1,
-	}
-);
+console.log(businessCard);
 
-console.log(card);
-
-/*
-console.log(
-	boxen("Emilio Blacskmith\n test \ntest 2", {
-		height: 15,
-		width: 100,
-		borderStyle: "round",
-		textAlignment: "center",
-		float: "center",
-		dimBorder: true,
-		margin: 1,
-		padding: 1,
-	})
-);
-*/
+const prompt = inquirer.createPromptModule();
+prompt(questions).then((answer) => answer.action());
