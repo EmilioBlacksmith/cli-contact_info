@@ -1,0 +1,19 @@
+{
+	"name": "cli-portfolio",
+	"version": "1.0.0",
+	"description": "A terminal-based portfolio, that can be called anywhere with NPM.",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc",
+		"dev": "tsc && node dist/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.11.30",
+		"typescript": "^5.4.3"
+	}
+}
