@@ -1,6 +1,6 @@
 {
 	"name": "cli-portfolio",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A terminal-based portfolio, that can be called anywhere with NPM.",
 	"main": "index.js",
 	"type": "module",
