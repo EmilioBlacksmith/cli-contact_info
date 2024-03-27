@@ -1,2 +1,3 @@
-# cli-portfolio
-A terminal-based portfolio, that can be called anywhere with NPM.
+# CLI Links / Business Card
+
+A terminal-based bio links and business Card, that can be called anywhere with NPM.

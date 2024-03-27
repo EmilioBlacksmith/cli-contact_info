@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // import dependencies
 import inquirer from "inquirer";
 import clear from "clear";

@@ -1,18 +1,32 @@
 {
-	"name": "cli-portfolio",
-	"version": "1.0.1",
-	"description": "A terminal-based portfolio, that can be called anywhere with NPM.",
-	"main": "index.js",
+	"name": "emilioblacksmith",
+	"version": "1.2.0",
+	"description": "A terminal-based bio links and business card, that can be called anywhere with NPM.",
+	"main": "dist/index.js",
 	"type": "module",
+	"bin": {
+		"emilioblacksmith": "dist/index.js"
+	},
 	"scripts": {
+		"start": "node ./dist/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "tsc && npm run mv-config",
 		"dev": "tsc && npm run mv-config && node dist/index.js",
 		"mv-config": "ncp ./src/config ./dist/config"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"card",
+		"biolinks",
+		"links",
+		"bio links",
+		"npm card",
+		"npm portfolio",
+		"portfolio",
+		"npx card",
+		"business card"
+	],
+	"author": "Emilio Blacksmith",
+	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^20.11.30",
 		"ncp": "^2.0.0",
@@ -24,5 +38,13 @@
 		"clear": "^0.1.0",
 		"inquirer": "^9.2.16",
 		"open": "^10.1.0"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://github.com/EmilioBlacksmith/cli-portfolio",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/EmilioBlacksmith/cli-portfolio.git"
 	}
 }
