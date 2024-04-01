@@ -10,7 +10,7 @@ A terminal-based bio links and business Card, that can be called anywhere with N
 ## Try it yourself 💻
 
 ```bash
-    npx emilioblacksmith
+npx emilioblacksmith
 ```
 
 ## Installation and Usage
