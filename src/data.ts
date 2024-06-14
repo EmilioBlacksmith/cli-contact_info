@@ -1,14 +1,25 @@
 import fs from "fs";
 import path from "path";
 import chalk from "chalk";
+import { fileURLToPath } from "url";
 
-const personalInfoFilePath = "config/personal-info.json";
-const currentFilePath = new URL(import.meta.url).pathname;
-const currentDirectory = path.dirname(currentFilePath);
-const dataCatch = fs.readFileSync(
-	path.resolve(currentDirectory.substring(1), personalInfoFilePath),
-	"utf-8"
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const personalInfoFilePath = path.resolve(
+	__dirname,
+	"config/personal-info.json"
 );
+
+let dataCatch;
+try {
+	dataCatch = fs.readFileSync(personalInfoFilePath, "utf-8");
+} catch (error) {
+	console.error(
+		chalk.red(`Error reading file at ${personalInfoFilePath}: ${error.message}`)
+	);
+	process.exit(1);
+}
 
 const infoData = JSON.parse(dataCatch);
 
